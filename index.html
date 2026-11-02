@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicoPlay — 8-Bit Fantasy Arcade for PlayStation 4 &amp; Android</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="PicoPlay — 8-Bit Fantasy Arcade for PlayStation 4 &amp; Android">
+  <meta name="description" content="Play authentic 8-bit fantasy console cartridges natively on PlayStation 4 (GoldHEN) and Android. Native 60 FPS C++ engine, in-app BBS Arcade store, and DualShock 4 &amp; touch gamepad support.">
+  <meta name="keywords" content="PicoPlay, PICO-8 emulator, PS4 homebrew, GoldHEN PKG, Android PICO-8, fantasy console player, retro gaming, fake PKG, DualShock 4 mouse, Slipways, Celeste, handheld emulator, open source, 16KB page size">
+  <meta name="author" content="birth1mark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://birth1mark.github.io/picoplay/">
+
+  <!-- Open Graph / Facebook / Discord / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PicoPlay Official Portal">
+  <meta property="og:url" content="https://birth1mark.github.io/picoplay/">
+  <meta property="og:title" content="PicoPlay — 8-Bit Fantasy Arcade for PlayStation 4 &amp; Android">
+  <meta property="og:description" content="Play authentic 8-bit fantasy console cartridges natively on PlayStation 4 and Android with rock-solid 60 FPS, BBS online cartridge discovery, and full gamepad support.">
+  <meta property="og:image" content="https://birth1mark.github.io/picoplay/assets/hero-banner.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="PicoPlay 8-Bit Fantasy Arcade Banner">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://birth1mark.github.io/picoplay/">
+  <meta name="twitter:title" content="PicoPlay — 8-Bit Fantasy Arcade for PS4 &amp; Android">
+  <meta name="twitter:description" content="Native 60 FPS 8-bit fantasy console gaming on PS4 and Android. Free, open source, and packed with BBS cartridge download support.">
+  <meta name="twitter:image" content="https://birth1mark.github.io/picoplay/assets/hero-banner.png">
+  <meta name="twitter:creator" content="@birth1mark">
+
+  <!-- Favicon & Mobile Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1D2B53">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Structured Data / JSON-LD (Schema.org) for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "PicoPlay",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "PlayStation 4, Android 8.0+",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "description": "Authentic 8-bit fantasy console player for PlayStation 4 and Android featuring a 60 FPS C++ engine, in-app BBS Arcade store, and native controller support.",
+        "downloadUrl": "https://github.com/birth1mark/picoplay-ps4/releases/latest",
+        "author": {
+          "@type": "Person",
+          "name": "birth1mark",
+          "url": "https://github.com/birth1mark"
+        },
+        "screenshot": "https://birth1mark.github.io/picoplay/assets/screenshot-ps4.png",
+        "softwareVersion": "1.01 (PS4) / 1.0.2 (Android)"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is PicoPlay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PicoPlay is a native, high-performance C++ player and emulator for 8-bit fantasy console cartridges (PICO-8 compatible). It runs on both jailbroken PlayStation 4 consoles (via GoldHEN Fake PKG) and Android smartphones, tablets, and handheld gaming consoles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I install PicoPlay on PlayStation 4?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Transfer the picoplay-ps4.pkg file to your PS4 hard drive at /data/pkg/ via GoldHEN FTP (port 2121) or to the root of a FAT32/exFAT USB flash drive. Then on your PS4, go to Settings -> GoldHEN -> Package Installer and press Install."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does PicoPlay support touch and mouse controls?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. On PS4, PicoPlay maps the DualShock 4 Touchpad and Right Analog Stick to PICO-8 mouse input (stat 32, 33, 34), making games like Slipways completely playable. On Android, PicoPlay features an ergonomic on-screen Pocket Touch Gamepad and full Bluetooth/USB mouse and gamepad support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PicoPlay compatible with modern Android 15 and 16 devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. PicoPlay Android is built with 16 KB page-size memory alignment, ensuring complete forward compatibility with Android 15, Android 16, Google Pixel, and next-gen ARM64 hardware."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      /* PICO-8 Authentic 16-Color Palette */
+      --p8-black: #000000;
+      --p8-dark-blue: #1D2B53;
+      --p8-dark-purple: #7E2553;
+      --p8-dark-green: #008751;
+      --p8-brown: #AB5236;
+      --p8-dark-gray: #5F574F;
+      --p8-light-gray: #C2C3C7;
+      --p8-white: #FFF1E8;
+      --p8-red: #FF004D;
+      --p8-orange: #FFA300;
+      --p8-yellow: #FFEC27;
+      --p8-green: #00E436;
+      --p8-blue: #29ADFF;
+      --p8-indigo: #83769C;
+      --p8-pink: #FF77A8;
+      --p8-peach: #FFCCAA;
+
+      /* UI Tokens */
+      --bg-dark: #0a0a10;
+      --bg-surface: #121422;
+      --bg-surface-elevated: #1a1e34;
+      --border-subtle: rgba(255, 241, 232, 0.12);
+      --border-accent: rgba(41, 173, 255, 0.35);
+      --text-main: #FFF1E8;
+      --text-muted: #C2C3C7;
+      --text-dim: #83769C;
+
+      --font-pixel: 'Press Start 2P', monospace;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(29, 43, 83, 0.5) 0%, transparent 60%),
+        radial-gradient(circle at 100% 40%, rgba(126, 37, 83, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 0% 80%, rgba(0, 135, 81, 0.2) 0%, transparent 50%);
+    }
+
+    /* Pixel Grid Effect Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 4px, 6px 100%;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.6;
+    }
+
+    a {
+      color: var(--p8-blue);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      color: var(--p8-yellow);
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header & Navigation */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-main);
+      font-family: var(--font-pixel);
+      font-size: 16px;
+      letter-spacing: -0.5px;
+    }
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(41, 173, 255, 0.4);
+      image-rendering: pixelated;
+    }
+
+    nav.main-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.main-nav a {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    nav.main-nav a:hover {
+      color: var(--p8-yellow);
+      text-decoration: none;
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 24px;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 2px solid transparent;
+      text-decoration: none !important;
+      font-family: var(--font-body);
+    }
+    .btn-pixel {
+      font-family: var(--font-pixel);
+      font-size: 12px;
+      padding: 14px 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .btn-ps4 {
+      background: linear-gradient(135deg, #00439c 0%, #0070d1 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 18px rgba(0, 112, 209, 0.4);
+    }
+    .btn-ps4:hover {
+      background: linear-gradient(135deg, #0053bf 0%, #29adff 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(41, 173, 255, 0.6);
+      color: #ffffff;
+    }
+    .btn-android {
+      background: linear-gradient(135deg, #008751 0%, #00e436 100%);
+      color: #0c0c14;
+      box-shadow: 0 4px 18px rgba(0, 228, 54, 0.35);
+    }
+    .btn-android:hover {
+      background: linear-gradient(135deg, #00b060 0%, #3bfb6b 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0, 228, 54, 0.55);
+      color: #0c0c14;
+    }
+    .btn-secondary {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+    .btn-secondary:hover {
+      background: var(--p8-dark-blue);
+      border-color: var(--p8-blue);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .btn-itch {
+      background: #fa5c5c;
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(250, 92, 92, 0.35);
+    }
+    .btn-itch:hover {
+      background: #ff7575;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(41, 173, 255, 0.12);
+      color: var(--p8-blue);
+      border: 1px solid rgba(41, 173, 255, 0.3);
+      font-family: var(--font-mono);
+    }
+    .badge-neon {
+      background: rgba(0, 228, 54, 0.12);
+      color: var(--p8-green);
+      border-color: rgba(0, 228, 54, 0.3);
+    }
+
+    /* Hero Section */
+    section.hero {
+      padding: 72px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-content {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-family: var(--font-pixel);
+      font-size: clamp(24px, 5vw, 42px);
+      line-height: 1.35;
+      margin: 24px 0 20px;
+      color: var(--p8-white);
+      text-shadow: 0 0 24px rgba(41, 173, 255, 0.4), 3px 3px 0 var(--p8-dark-blue);
+    }
+    .hero p.tagline {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      font-weight: 400;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    /* Hero Preview Media Container */
+    .hero-media-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-accent);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(41, 173, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+      margin-top: 16px;
+    }
+    .hero-media-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Platform Grid (Dual Showcase) */
+    section.platforms {
+      padding: 60px 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-title h2 {
+      font-family: var(--font-pixel);
+      font-size: clamp(20px, 4vw, 28px);
+      margin-bottom: 12px;
+      color: var(--p8-yellow);
+      text-shadow: 2px 2px 0 var(--p8-brown);
+    }
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 17px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+    }
+
+    .platform-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+    }
+    .platform-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+    }
+    .platform-card.ps4 {
+      border-top: 4px solid var(--p8-blue);
+    }
+    .platform-card.android {
+      border-top: 4px solid var(--p8-green);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .card-header .platform-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      image-rendering: pixelated;
+      background: var(--bg-surface-elevated);
+      padding: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .card-header h3 {
+      font-family: var(--font-pixel);
+      font-size: 18px;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .card-header .version-tag {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--p8-yellow);
+    }
+
+    .card-features {
+      list-style: none;
+      margin: 20px 0;
+      flex-grow: 1;
+    }
+    .card-features li {
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .card-features li strong {
+      color: var(--text-main);
+    }
+    .check-icon {
+      color: var(--p8-green);
+      font-weight: bold;
+    }
+
+    .card-preview-thumb {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-subtle);
+      background: #000;
+    }
+    .card-preview-thumb img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Engine Highlights */
+    section.features {
+      padding: 60px 0;
+      background: rgba(18, 20, 34, 0.4);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.2s;
+    }
+    .feature-box:hover {
+      border-color: rgba(255, 236, 39, 0.4);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .feature-box h4 {
+      font-family: var(--font-pixel);
+      font-size: 14px;
+      color: var(--p8-white);
+      margin-bottom: 10px;
+    }
+    .feature-box p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Installation Guides Section */
+    section.guides {
+      padding: 60px 0;
+    }
+    .tabs-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .tab-buttons {
+      display: flex;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 18px 24px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-pixel);
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--bg-surface);
+      color: var(--p8-yellow);
+      border-bottom: 2px solid var(--p8-yellow);
+    }
+    .tab-panel {
+      padding: 32px;
+      display: none;
+    }
+    .tab-panel.active {
+      display: block;
+    }
+    .steps-list {
+      list-style-type: decimal;
+      padding-left: 24px;
+      margin-bottom: 24px;
+    }
+    .steps-list li {
+      margin-bottom: 14px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .steps-list li strong {
+      color: var(--text-main);
+    }
+    .code-snippet {
+      background: #000000;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--p8-green);
+      display: block;
+      margin: 8px 0;
+      overflow-x: auto;
+    }
+
+    /* FAQ Section */
+    section.faq {
+      padding: 60px 0;
+    }
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    details.faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 18px 24px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    details.faq-item:hover, details.faq-item[open] {
+      border-color: var(--border-accent);
+    }
+    summary.faq-question {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text-main);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    summary.faq-question::-webkit-details-marker {
+      display: none;
+    }
+    summary.faq-question::after {
+      content: "▼";
+      font-size: 12px;
+      color: var(--p8-blue);
+      transition: transform 0.2s;
+    }
+    details[open] summary.faq-question::after {
+      transform: rotate(180deg);
+      color: var(--p8-yellow);
+    }
+    .faq-answer {
+      margin-top: 14px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 12px;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #07070b;
+      border-top: 1px solid var(--border-subtle);
+      padding: 48px 0 32px;
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .footer-col h5 {
+      font-family: var(--font-pixel);
+      font-size: 13px;
+      color: var(--p8-white);
+      margin-bottom: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .footer-col ul li a:hover {
+      color: var(--p8-yellow);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .nav-wrapper {
+        flex-direction: column;
+        height: auto;
+        padding: 16px 0;
+        gap: 16px;
+      }
+      nav.main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-ctas {
+        flex-direction: column;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand" aria-label="PicoPlay Home">
+        <img src="assets/icon-512.png" alt="PicoPlay Logo" width="40" height="40">
+        <span>PICOPLAY</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#platforms">Platforms</a>
+        <a href="#features">Features</a>
+        <a href="#guides">Install Guide</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="https://github.com/birth1mark/picoplay-ps4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px;">
+          <svg height="18" viewBox="0 0 16 16" width="18" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <div class="badge badge-neon">
+          <span>●</span> Multi-Platform 8-Bit Fantasy Arcade Hub
+        </div>
+
+        <h1>Play Retro Fantasy Consoles on PS4 &amp; Android.</h1>
+        <p class="tagline">
+          Experience thousands of creative 8-bit cartridges at native <strong>60 FPS</strong> with authentic chiptune synthesis, built-in BBS online cartridge store, and full DualShock 4 &amp; touch controls.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#ps4-edition" class="btn btn-pixel btn-ps4">
+            🎮 Get for PS4 (.pkg)
+          </a>
+          <a href="#android-edition" class="btn btn-pixel btn-android">
+            📱 Get for Android (.apk)
+          </a>
+          <a href="https://birth1mark.itch.io/picoplay" target="_blank" rel="noopener noreferrer" class="btn btn-pixel btn-itch">
+            🕹️ itch.io Store
+          </a>
+        </div>
+
+        <div class="hero-media-card">
+          <img src="assets/hero-banner.png" alt="PicoPlay 8-Bit Fantasy Arcade Platform Preview" width="1024" height="500" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Showcase Section -->
+    <section class="platforms" id="platforms">
+      <div class="container">
+        <div class="section-title">
+          <h2>Choose Your Battle Station</h2>
+          <p>Hand-crafted native C++ engines engineered for each platform with zero compromises.</p>
+        </div>
+
+        <div class="platform-grid">
+          <!-- PS4 Edition Card -->
+          <article class="platform-card ps4" id="ps4-edition">
+            <div class="card-header">
+              <img src="assets/icon-ps4.png" alt="PicoPlay PS4 Icon" class="platform-icon" width="56" height="56">
+              <div>
+                <h3>PlayStation 4 Edition</h3>
+                <span class="version-tag">Latest: v1.01 • Fake PKG</span>
+              </div>
+            </div>
+
+            <div class="card-preview-thumb">
+              <img src="assets/screenshot-ps4.png" alt="PicoPlay PS4 Gameplay Running on GoldHEN" width="640" height="360" loading="lazy">
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 12px;">
+              Designed for your living room arcade on jailbroken PS4 consoles (GoldHEN / Mira 5.05 - 11.00).
+            </p>
+
+            <ul class="card-features">
+              <li><span class="check-icon">✔</span> <div><strong>Rock-Solid 60 FPS:</strong> Custom -O2 integer scanline scaler directly mapped to PS4 VideoOut buffer in under 0.3 ms.</div></li>
+              <li><span class="check-icon">✔</span> <div><strong>DualShock 4 Mouse Emulation:</strong> Touchpad &amp; Right Analog Stick cursor support for games like <em>Slipways</em>.</div></li>
+              <li><span class="check-icon">✔</span> <div><strong>1-Click GoldHEN Install:</strong> Direct package deployment to <code>/data/pkg</code> with zero hassle.</div></li>
+              <li><span class="check-icon">✔</span> <div><strong>In-App BBS Arcade:</strong> Download community carts straight to your PS4 hard drive.</div></li>
+            </ul>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: auto;">
+              <a href="https://github.com/birth1mark/picoplay-ps4/releases/latest/download/picoplay-ps4.pkg" class="btn btn-ps4" style="width: 100%;">
+                ⬇ Download picoplay-ps4.pkg (6.6 MB)
+              </a>
+              <a href="https://github.com/birth1mark/picoplay-ps4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                View PS4 Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- Android Edition Card -->
+          <article class="platform-card android" id="android-edition">
+            <div class="card-header">
+              <img src="assets/icon-512.png" alt="PicoPlay Android Icon" class="platform-icon" width="56" height="56">
+              <div>
+                <h3>Android Edition</h3>
+                <span class="version-tag">Latest: v1.0.2 • Standalone APK</span>
+              </div>
+            </div>
+
+            <div class="card-preview-thumb">
+              <img src="assets/screenshot-android.png" alt="PicoPlay Android Pocket Touch Gamepad" width="640" height="360" loading="lazy">
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 12px;">
+              Optimized for Android smartphones, tablets, Android TV, and handheld gaming consoles.
+            </p>
+
+            <ul class="card-features">
+              <li><span class="check-icon">✔</span> <div><strong>Pocket Touch Gamepad:</strong> Ergonomic on-screen virtual d-pad with haptic feedback &amp; gesture support.</div></li>
+              <li><span class="check-icon">✔</span> <div><strong>Android 16 &amp; 16KB Ready:</strong> Compiled with 16KB page alignment for next-gen ARM64 devices and Google Pixel.</div></li>
+              <li><span class="check-icon">✔</span> <div><strong>Hardware Controllers:</strong> Native support for Retroid Pocket, AYN Odin, 8BitDo, and Bluetooth gamepads.</div></li>
+              <li><span class="check-icon">✔</span> <div><strong>Offline Cartridge Library:</strong> Bundled starter pack including <em>Slipways</em>, <em>Celeste</em>, and more.</div></li>
+            </ul>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: auto;">
+              <a href="https://github.com/birth1mark/picoplay-android/releases/latest/download/picoplay-full-v1.0.2.apk" class="btn btn-android" style="width: 100%;">
+                ⬇ Download picoplay-full.apk
+              </a>
+              <a href="https://github.com/birth1mark/picoplay-android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                View Android Repository
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Architecture Features -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pure Arcade Engineering</h2>
+          <p>Built from the ground up for speed, fidelity, and zero latency.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">⚡</div>
+            <h4>Native C++ Core</h4>
+            <p>Engineered without heavy virtualization overhead. Executes PICO-8 Lua bytecode and graphics primitives with laser-sharp frame timing.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">🛒</div>
+            <h4>In-App BBS Explorer</h4>
+            <p>Search, preview, and download thousands of public domain and indie cartridges directly from the online repository without manual file transfers.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">🔊</div>
+            <h4>Chiptune Synthesizer</h4>
+            <p>Authentic 4-channel audio synthesizer faithfully recreating standard waveforms, frequency sweeps, noise channels, and custom SFX instruments.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">💾</div>
+            <h4>Zero Data Loss Saves</h4>
+            <p>Full persistent storage support for <code>cartdata()</code> and <code>dset()</code> to save your high scores, level progression, and stats safely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Guides -->
+    <section class="guides" id="guides">
+      <div class="container">
+        <div class="section-title">
+          <h2>Quick Start Guide</h2>
+          <p>Get up and running in under 2 minutes on your platform of choice.</p>
+        </div>
+
+        <div class="tabs-wrapper">
+          <div class="tab-buttons" role="tablist">
+            <button class="tab-btn active" id="tab-ps4-btn" onclick="switchTab('ps4')">
+              🎮 PlayStation 4 (GoldHEN)
+            </button>
+            <button class="tab-btn" id="tab-android-btn" onclick="switchTab('android')">
+              📱 Android (APK)
+            </button>
+          </div>
+
+          <!-- PS4 Instructions -->
+          <div class="tab-panel active" id="panel-ps4">
+            <h3 style="font-family: var(--font-pixel); font-size: 16px; margin-bottom: 16px; color: var(--p8-blue);">Installing on PS4 via GoldHEN Package Installer</h3>
+            <ol class="steps-list">
+              <li>
+                <strong>Download the Fake PKG:</strong> Get <a href="https://github.com/birth1mark/picoplay-ps4/releases/latest/download/picoplay-ps4.pkg">picoplay-ps4.pkg</a> from GitHub Releases.
+              </li>
+              <li>
+                <strong>Option A — Via GoldHEN FTP (Fastest):</strong> Connect to your PS4 console via FTP on port <code>2121</code> and upload the PKG to:
+                <code class="code-snippet">/data/pkg/picoplay-ps4.pkg</code>
+              </li>
+              <li>
+                <strong>Option B — Via USB Flash Drive:</strong> Copy <code>picoplay-ps4.pkg</code> to the root directory of a FAT32 or exFAT formatted USB drive and plug it into your PS4.
+              </li>
+              <li>
+                <strong>Install on Console:</strong> On your PS4, navigate to <strong>Settings</strong> &rarr; <strong>GoldHEN</strong> &rarr; <strong>Package Installer</strong> and install PicoPlay.
+              </li>
+              <li>
+                <strong>Launch &amp; Play:</strong> Launch PicoPlay from the PlayStation Home Menu! Use <kbd>Options</kbd> for Pause/Menu, <kbd>Touchpad</kbd> or <kbd>Right Stick</kbd> for mouse control, and <kbd>L1 + R1 + Options</kbd> to quit.
+              </li>
+            </ol>
+          </div>
+
+          <!-- Android Instructions -->
+          <div class="tab-panel" id="panel-android">
+            <h3 style="font-family: var(--font-pixel); font-size: 16px; margin-bottom: 16px; color: var(--p8-green);">Installing on Android Smartphones &amp; Handhelds</h3>
+            <ol class="steps-list">
+              <li>
+                <strong>Download APK:</strong> Download <a href="https://github.com/birth1mark/picoplay-android/releases/latest/download/picoplay-full-v1.0.2.apk">picoplay-full-v1.0.2.apk</a> directly to your Android device.
+              </li>
+              <li>
+                <strong>Allow Unknown Sources:</strong> If prompted by Android, enable <em>"Install unknown apps"</em> for your browser or file manager.
+              </li>
+              <li>
+                <strong>Install &amp; Grant Storage:</strong> Open the downloaded APK and tap <strong>Install</strong>.
+              </li>
+              <li>
+                <strong>Load Cartridges:</strong> Tap into the built-in BBS store to download cartridges instantly, or place your existing <code>.p8</code> / <code>.p8.png</code> files into your device storage!
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about PicoPlay and PICO-8 cart compatibility.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <details class="faq-item" open>
+            <summary class="faq-question">What is PicoPlay?</summary>
+            <div class="faq-answer">
+              PicoPlay is a free and open-source recreation of an 8-bit fantasy console engine. It allows gamers and developers to play community cartridges natively on modern hardware like the PlayStation 4 and Android with rock-solid 60 FPS performance, low input latency, and controller integration.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do I need to own PICO-8 to play games?</summary>
+            <div class="faq-answer">
+              No! Thousands of PICO-8 cartridges published on the Lexaloffle BBS are free and open for public play. PicoPlay includes an integrated BBS browser that lets you discover, download, and enjoy these community games directly inside the app.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does DualShock 4 mouse emulation work on PS4?</summary>
+            <div class="faq-answer">
+              Games with mouse input (such as <em>Slipways</em>) read PICO-8 hardware registers <code>stat(32)</code>, <code>stat(33)</code>, and <code>stat(34)</code>. PicoPlay PS4 reads the DualShock 4 touchpad coordinates and right analog stick directly, mapping them smoothly to the 128&times;128 fantasy screen with trigger clicks for left/right mouse buttons.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is PicoPlay open source?</summary>
+            <div class="faq-answer">
+              Yes, PicoPlay is 100% open source under permissive licensing. Both the PlayStation 4 source code and the Android source code are maintained publicly on GitHub by <a href="https://github.com/birth1mark" target="_blank" rel="noopener">birth1mark</a>.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>PicoPlay</h5>
+          <p style="color: var(--text-dim); font-size: 13px; margin-bottom: 12px;">
+            The native 8-bit fantasy console player and arcade hub for modern homebrew platforms.
+          </p>
+          <div class="badge badge-neon" style="font-size: 11px;">100% Free &amp; Open Source</div>
+        </div>
+
+        <div class="footer-col">
+          <h5>PlayStation 4</h5>
+          <ul>
+            <li><a href="https://github.com/birth1mark/picoplay-ps4/releases/latest">Download Fake PKG</a></li>
+            <li><a href="https://github.com/birth1mark/picoplay-ps4">PS4 Source Code</a></li>
+            <li><a href="https://github.com/birth1mark/picoplay-ps4/issues">Report PS4 Bug</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Android</h5>
+          <ul>
+            <li><a href="https://github.com/birth1mark/picoplay-android/releases/latest">Download Standalone APK</a></li>
+            <li><a href="https://github.com/birth1mark/picoplay-android">Android Source Code</a></li>
+            <li><a href="https://birth1mark.itch.io/picoplay">itch.io Storefront</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Community</h5>
+          <ul>
+            <li><a href="https://github.com/birth1mark" target="_blank" rel="noopener">GitHub Profile (@birth1mark)</a></li>
+            <li><a href="https://birth1mark.itch.io" target="_blank" rel="noopener">itch.io Profile</a></li>
+            <li><a href="sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          Maintained by <strong>birth1mark</strong>. PICO-8 is a registered trademark of Lexaloffle Games. PicoPlay is an independent open-source player and is not affiliated with or endorsed by Lexaloffle Games.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tab Switcher Script (Vanilla JS, 0 dependencies) -->
+  <script>
+    function switchTab(platform) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+      if (platform === 'ps4') {
+        document.getElementById('tab-ps4-btn').classList.add('active');
+        document.getElementById('panel-ps4').classList.add('active');
+      } else {
+        document.getElementById('tab-android-btn').classList.add('active');
+        document.getElementById('panel-android').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
