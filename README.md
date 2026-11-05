@@ -1,6 +1,7 @@
 # PicoPlay — Official Unified Portal 🎮📱
 
 [![GitHub Pages Deployment](https://github.com/birth1mark/picoplay/actions/workflows/deploy.yml/badge.svg)](https://birth1mark.github.io/picoplay/)
+[![Google Play](https://img.shields.io/badge/Google_Play-PicoPlay-01875f?logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.birth1mark.picoplay)
 [![PS4 Release](https://img.shields.io/github/v/release/birth1mark/picoplay-ps4?label=PS4%20PKG&color=0070d1)](https://github.com/birth1mark/picoplay-ps4/releases/latest)
 [![Android Release](https://img.shields.io/github/v/release/birth1mark/picoplay-android?label=Android%20APK&color=00e436)](https://github.com/birth1mark/picoplay-android/releases/latest)
 [![itch.io](https://img.shields.io/badge/itch.io-birth1mark.itch.io%2Fpicoplay-fa5c5c)](https://birth1mark.itch.io/picoplay)
