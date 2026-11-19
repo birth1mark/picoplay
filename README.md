@@ -6,6 +6,7 @@
 [![Android Release](https://img.shields.io/github/v/release/birth1mark/picoplay-android?label=Android%20APK&color=00e436)](https://github.com/birth1mark/picoplay-android/releases/latest)
 [![itch.io](https://img.shields.io/badge/itch.io-birth1mark.itch.io%2Fpicoplay-fa5c5c)](https://birth1mark.itch.io/picoplay)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-ff5e5b?logo=kofi&logoColor=white)](https://ko-fi.com/birth1mark)
 
 > **Official Live Website**: [https://birth1mark.github.io/picoplay/](https://birth1mark.github.io/picoplay/)
 
@@ -63,6 +64,7 @@ picoplay/
 
 ## 📄 License & Disclaimer
 
-Maintained by **[birth1mark](https://github.com/birth1mark)**.
+Maintained by **[birth1mark](https://github.com/birth1mark)**.  
+☕ **Support**: If you love PicoPlay on PS4 or Android, consider [supporting on Ko-fi](https://ko-fi.com/birth1mark) to help fund development and maintenance!
 
 *Disclaimer: PICO-8 is a registered trademark of Lexaloffle Games. PicoPlay is an independent open-source recreation and is not affiliated with or endorsed by Lexaloffle Games.*
